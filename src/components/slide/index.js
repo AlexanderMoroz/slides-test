@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Box } from "theme-ui";
 import { useInView } from "react-intersection-observer";
-import motion from "../motion";
+import animated from "../animated";
 import { calculateVerticalPercentage } from "../../utils";
 import throttle from 'lodash.throttle';
 
@@ -48,7 +48,7 @@ const Slide = ({
 					marginBottom: `${100}vh`,
 				}}
 			>
-				<motion.flex
+				<animated.flex
 					{...rest}
 					sx={{
 						position: 'fixed',
@@ -71,7 +71,7 @@ const Slide = ({
 					}}
 				>
 					{children({ percentage })}
-				</motion.flex>
+				</animated.flex>
 			</Box>
 		</div>
 	)

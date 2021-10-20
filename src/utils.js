@@ -13,3 +13,8 @@ export function calculateVerticalPercentage(
 
 	return 1 - Math.max(0, Math.min(1, percentage))
 }
+
+export function calculateWindowScroll() {
+	return document.documentElement.scrollTop /
+		(document.documentElement.scrollHeight - document.documentElement.clientHeight) * 100;
+}
