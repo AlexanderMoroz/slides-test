@@ -29,9 +29,9 @@ const Slide = ({
 		if (inView) {
 			const scrollListener = throttle(() => {
 				setPercentage(
-					calculateVerticalPercentage(localRef.current)
+					Math.floor(calculateVerticalPercentage(localRef.current) * 100) / 100
 				);
-			}, 500);
+			}, 100);
 			window.addEventListener('scroll', scrollListener)
 			return () => window.removeEventListener('scroll', scrollListener)
 		}

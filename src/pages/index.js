@@ -8,23 +8,23 @@ const IndexPage = () => {
     <>
       <Ball />
       <Slide backgroundColor="highlight" height={80}>
-        {() => <>
+        {({ percentage }) => <>
           <Heading>
-            First slide
+            {`First slide: ${(percentage * 100).toFixed(0)}%`}
           </Heading>
         </>}
       </Slide>
       <Slide backgroundColor="gray" offset={20} percentage>
-        {() => (
+        {({ percentage }) => (
           <Heading>
-            Second slide
+            {`Second slide: ${(percentage * 100).toFixed(0)}%`}
           </Heading>
         )}
       </Slide>
       <Slide backgroundColor="secondary">
-        {() => (
+        {({ percentage }) => (
           <Heading>
-            Third slide
+            {`Third slide: ${(percentage * 100).toFixed(0)}%`}
           </Heading>
         )}
       </Slide>
