@@ -18,3 +18,7 @@ export function calculateWindowScroll() {
 	return document.documentElement.scrollTop /
 		(document.documentElement.scrollHeight - document.documentElement.clientHeight) * 100;
 }
+
+export function lowerCaseFirstLetter(str) {
+	return str.charAt(0).toLowerCase() + str.slice(1);
+}
